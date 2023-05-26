@@ -1,10 +1,16 @@
 describe('POST /sessions', () => {
-    it('user session', () => {
-        const user = {
-            name: 'Fernando Papito',
-            email: 'papito@yahoo.com',
-            password: 'pwd123'
-        }
+
+    beforeEach(() => {
+        cy.fixture('users').then(function(users){
+            this.users = users
+        })
+    })
+
+    it('user session', function() {
+        const user = this.users.login
+
+        cy.task('deleteUser', user.email)
+        cy.postUser(user)
 
         cy.postSession(user)
         .then(response => {
@@ -15,11 +21,8 @@ describe('POST /sessions', () => {
         })
     })
 
-    it('invalid password', () => {
-        const user = {
-            email: 'papito@yahoo.com',
-            password: '123456'
-        }
+    it('invalid password', function() {
+        const user = this.users.inv_pass
 
         cy.postSession(user)
         .then(response => {
@@ -27,17 +30,12 @@ describe('POST /sessions', () => {
         })
     })
 
-    it('email not found', () => {
-        const user = {
-            email: '404@yahoo.com',
-            password: '123456'
-        }
+    it('email not found', function() {
+        const user = this.users.email_404
 
         cy.postSession(user)
         .then(response => {
             expect(response.status).to.eq(401)
         })
     })
-
-    
 })

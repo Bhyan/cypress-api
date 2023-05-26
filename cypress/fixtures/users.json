@@ -1,0 +1,30 @@
+{
+    "login": {
+        "name": "Fernando Papito",
+        "email": "papito@yahoo.com",
+        "password": "pwd123"
+    },
+    "inv_pass": {
+        "email": "papito@yahoo.com",
+        "password": "123456"
+    },
+    "email_404": {
+        "email": "404@yahoo.com",
+        "password": "pwd123"
+    },
+    "create": {
+        "name": "Fernando Papito",
+        "email": "papito@yahoo.com",
+        "password": "pwd123"
+    },
+    "duplicate_email": {
+        "name": "James Gunn",
+        "email": "james@hotmail.com",
+        "password": "pwd123"
+    },
+    "required": {
+        "name": "Margot Robbie",
+        "email": "margot@gmail.com",
+        "password": "pwd123"
+    }
+}
