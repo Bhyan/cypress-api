@@ -1,0 +1,26 @@
+{
+    "update": {
+        "user": {
+            "name": "Steve Jobs",
+            "email": "steve@next.com",
+            "password": "pwd123"
+        },
+        "task": {
+            "name": "Construir o novo SO da Next",
+            "tags": [
+                "x86",
+                "unix"
+            ]
+        }
+    },
+    "not_found": {
+        "user": {
+            "name": "Steve Woz",
+            "email": "steve@apple.com",
+            "password": "pwd123"
+        },
+        "task": {
+            "name": "Construir o primeiro Apple"
+        }
+    }
+}
